@@ -1,4 +1,5 @@
 function init() {
+	// $(".line").css("height","100%");
 
 	function copyDiv() {
 	    var firstDivContent = document.getElementById('mydiv1');
@@ -12,7 +13,7 @@ function init() {
 		    $('#mydiv2').find(".textbody").scrollTop($(this).scrollTop());
 
 		});
-		    
+
 	}
 	scrolltop();
 
