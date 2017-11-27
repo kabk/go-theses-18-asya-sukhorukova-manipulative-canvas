@@ -69,7 +69,7 @@ background-color: white;
 	z-index: -1000;
 }
 #mydiv1{
-	border: 10px solid black;
+	border: 8px solid black;
 
 	-webkit-transform: rotate3d(1, 2, -1, 0deg);
 	transform: rotate3d(1, 2, -1, 0deg);
