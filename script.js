@@ -32,21 +32,22 @@
 		var changewidth;
 		
 		    $('#mydiv1').find(".textbody").on('scroll', function () {
-		    change1 = $("#mydiv1").find("h2").offset().top;
-		    change2 = $("anchor").offset().top;
-		    var change3;
+		    change1 = $("#mydiv1").find("h2").offset().top ;
+		    change2 = $("anchor").offset().top + 1000;
+		    var change3 ;
 		    console.log(change1);
 		    $('#mydiv2').find(".textbody").scrollTop($(this).scrollTop());
             
             
 
 		
-			if($("#mydiv1").find(".textbody").scrollTop() < change1/10){
+			if($("#mydiv1").find(".textbody").scrollTop() < change1){
 				// changewidth = $("#mydiv1").height()*1.8;
 				$("#mydiv1").css("width","65%");
 				$("#mydiv1").css("left","17.5%");
 				$("#top, #bottom").css("height",($(window).height() - $("#mydiv1").height())/2);
 		    	$("#left, #right").css("width",($(window).width() - $("#mydiv1").width())/2);
+		    	console.log($(".canvas").offset().top);
 
 				
 				// $("#mydiv1").css("border-radius","100%");
@@ -54,7 +55,7 @@
 				// $("#textbody").find("img").css("margin-left"," - "+ $("img").width()/1 +"px")
 				// changewidth = $("#mydiv1").height();
 				
-			}else if($("#mydiv1").find(".textbody").scrollTop() > change1/10 && $("#mydiv1").find(".textbody").scrollTop() < change2/10){
+			}else if($("#mydiv1").find(".textbody").scrollTop() > change1 && $("#mydiv1").find(".textbody").scrollTop() < change2){
 				$("#mydiv1").css("width",changewidth);
 			    $("#mydiv1").css("left","calc(50% - "+changewidth/2+"px)");
 				$("#mydiv1").css("border-radius","0%");
@@ -62,8 +63,8 @@
 				changewidth = $("#mydiv1").height()*1.5;
 				$("#top, #bottom").css("height",($(window).height() - $("#mydiv1").height())/2);
 		    	$("#left, #right").css("width",($(window).width() - $("#mydiv1").width())/2);
-			}else{
-				console.log("olaaa");
+			}else if($(".canvas").offset().top > 100){
+				$("#left, #right").css("width","100%");
 				// $(".circle").css("left","calc(-50% - "+39+"px)")
 			}
 
@@ -71,8 +72,8 @@
 
 	}
 	function changeshape(){
-			$("#top, #bottom").css("height",($(window).height() - $("#mydiv1").height())/2);
-		    $("#left, #right").css("width",($(window).width() - $("#mydiv1").width())/2);
+			// $("#top, #bottom").css("height",($(window).height() - $("#mydiv1").height())/2);
+		 //    $("#left, #right").css("width",($(window).width() - $("#mydiv1").width())/2);
 
 	}
 	changeshape()
@@ -81,8 +82,8 @@
 	copyDiv();
 	scrolltop();
 	setInterval(function(){ 
-				$("#top, #bottom").css("height",($(window).height() - $("#mydiv1").height())/2);
-		    	$("#left, #right").css("width",($(window).width() - $("#mydiv1").width())/2);
+				// $("#top, #bottom").css("height",($(window).height() - $("#mydiv1").height())/2);
+		  //   	$("#left, #right").css("width",($(window).width() - $("#mydiv1").width())/2);
 	 }, 1);
 
 }
