@@ -4,17 +4,19 @@
 	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 	<title>taf sketch</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="screen.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
 
 </head>
 <body>
+<!-- <div class="print">print</div> -->
 
-<div class="maintext" id="mydiv2"></div>
 <!-- <svg height="300" width="2000">
   <line class="line" x1="0" y1="1" style="stroke:rgb(0,0,0);stroke-width:10" />
 </svg> -->
-<div class="maintext" id="mydiv1">
+<div class="maintext" id="mydiv2"></div>
+<div class="maintext .visible-print" id="mydiv1">
 <!-- <h1>Beta Abstract</h1> -->
 	<div class="textbody">
 
@@ -22,23 +24,45 @@
 	<img src="visthesis2.jpg"/><br><br>
 
 	<h1>MANIPULATIVE CANVAS</h1>
-	<span class="header">Beta Abstract</span><br><br>
-<p>
-	<!-- <br><br><br><br><br><br> -->
+	<h2>Beta Abstract</h2>
+<!-- 	<span class="header">Beta Abstract</span><br><br> -->
+<p class="twocol">
 		I’m researching the subject of visual vocabulary that helps us deal with abstract ideas. Specifically, I’m looking at how this process of digestion consists of: <br>1) applied spatial metaphor; <br>2) translation on a (virtual) 2D canvas.<br> I want to more about how people picture intangible concepts like time. I’m interested in how, for instance, my own world view might be effected by these mental diagrams and want to know as much as possible about their origin. 
-		<br>
+</p>
+<p>
 		I suggest that visual thinking is not only a natural talent to think in images, but also a method based on cultural heritage, a language that everybody uses to certain extent and that can be very well taught and expanded just as verbal one. I think that graphic designers have a great power over this process, and that awareness of what image is and how it works should not be the prerogative of higher specialized education. 
-		<br>
+</p>
+<!-- <h2></h2>
+ --><p>
 		My research is mainly reading theoretical texts on related subjects, also case studies are very relevant for my thesis.
-		<br>
+</p>
+<p>
 		I’m talking about all sorts of abstractions that we apply images on, but I have to choose something to narrow it down, so I’m researching perception of time a lot, as it’s so fundamental that basically coordinates all other mental schemes. So far I’ve gathered some examples of different “shapes” given to time, like circle, spiral, arrow or cylinder. Apart from that, I found some very interesting material on time consciousness in different cultures, for instance how Mandarin-speakers are more likely to lay out time vertically than English-speakers. 
-		<br>
+</p>
+<p>
 		Apart from that, I’m focusing on ways of approaching image as a media. One of the case studies I’m using is about a group of Yanomami people who were given paper and pencils, and, not having drawing as a concept in their own culture, immediately started creating recognizable images. 
 		I think if I find more examples of multicultural perspectives on how to use image as an instrument I’ll be able to make my point stronger. Regarding western traditions, I’m interested in symbolic meanings that have been assigned to basic figures like line and circle.
-		<br><br><br><br>
-		</p>
+</p>
+<anchor>
+
+		
+		
 	</div>
 </div>
+<div id="border"></div>
+<div class="line" id="left">
+	<svg class="rect" height="100" width="100" style="position: absolute;">
+	  <rect width="80" height="80" stroke="red" stroke-width="1" fill="none"  />
+	</svg>
+</div>
+<div class="line" id="right">
+	<svg class="circle" height="100" width="100" style="position: absolute;">
+	  <circle cx="50" cy="50" r="40" stroke="red" stroke-width="1" fill="none" />
+	</svg>
+</div>
+<div class="line" id="top"></div>
+<div class="line" id="bottom"></div>
+
 
 	
 <script src="script.js"></script>

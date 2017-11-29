@@ -6,6 +6,36 @@ body{
 
   
 }
+/*@media print {
+  body * {
+    visibility: hidden;
+  }
+  #mydiv2 *{
+  	visibility: hidden;
+  }
+  .textbody{
+  	page-break-before: always;
+  	visibility: visible;
+  	height: 100%;
+  	height: auto;
+    overflow-y: visible;
+    left: 0;
+    top: 0;
+  }
+  #mydiv1, #mydiv1 * {
+  	page-break-before: always;
+    visibility: visible;
+  }
+  #mydiv1 {
+  	overflow-y: visible;
+  	width: auto;
+height: auto;
+overflow-y: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}*/
 
 .header{
 	font-size: 25px;
@@ -41,6 +71,7 @@ body{
 
 	-webkit-transform: rotate3d(1, 2, -1, 0deg);
 	transform: rotate3d(1, 2, -1, 0deg) scale(3);
+	position: absolute;
 	left: 30%;
 	top: 50%;
 	filter: blur(7px)
