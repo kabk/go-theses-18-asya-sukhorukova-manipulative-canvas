@@ -149,6 +149,7 @@ p{
 	position: fixed;
 /*	background-color: blue;*/
 	transition: 0.5s all;
+	transition-duration: 1s;
 		display: flex;
   align-items: center;
   justify-content: center;
