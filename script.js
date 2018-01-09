@@ -811,12 +811,12 @@ $(".toprint").click(function(){
 			$(this).css("padding-bottom",Math.random()*40 +"px");
 			$(this).css("margin-left", Math.random()*250 +"px");
 			$(this).css("margin-right", Math.random()*350 +"px");
-			$(this).css("margin-top", Math.random()*30 +"px");
+			$(this).css("margin-top", Math.random()*40 +"px");
 			$(this).css("margin-bottom", Math.random()*40 +"px");
-			$(this).css("min-height","200px");
-			$(this).css("min-width","200px");
+			$(this).css("min-height","150px");
+			$(this).css("min-width","150px");
 			$(this).css("max-width","500px");
-			$(this).css("-webkit-transform","scale("+  (Math.random() * (0.9-0.7) + 0.6)  +")");
+			$(this).css("-webkit-transform","scale("+  (Math.random() * (1-0.9) + 0.9)  +")");
 			$(this).css("border-"+randomborder[Math.floor(Math.random() * (5-0) + 0)],"4px solid black");
 		});
 
