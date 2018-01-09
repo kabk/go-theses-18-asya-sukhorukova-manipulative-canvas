@@ -668,7 +668,7 @@ function init() {
 						animation2();
 						p_width_wide();
 					}
-					
+
 					$(".chapters").removeClass("underline");
 					$("#number3").addClass("underline");
 					subchapters.each(function(i,e) {
@@ -682,7 +682,7 @@ function init() {
 					}
 				});
 					animations();
-					
+
 				}else if(chapter4.isOnScreen() === true){
 					if($( window ).width() > maxpix){
 						animation1();
@@ -692,7 +692,7 @@ function init() {
 						animation2();
 						p_width_wide();
 					}
-					
+
 					$(".chapters").removeClass("underline");
 					$("#number4").addClass("underline");
 					subchapters.each(function(i,e) {
@@ -706,7 +706,7 @@ function init() {
 					}
 				});
 					animations();
-					
+
 				}else if(chapter5.isOnScreen() === true){
 					if($( window ).width() > maxpix){
 						anim_last_chapter();
@@ -797,7 +797,7 @@ $(".toprint").click(function(){
 		var maintext = $("mydiv1").find(".maintext");
 		var img2 = $(".maintext").find(".imgs");
 		var mydiv1 = $("#mydiv1");
-		var randomborder = ["bottom","right","left","top"];
+		var randomborder = ["","bottom","right","left","top"];
 
 
 		console.log('Functionality to run before printing.');
@@ -817,7 +817,7 @@ $(".toprint").click(function(){
 			$(this).css("min-width","200px");
 			$(this).css("max-width","500px");
 			$(this).css("-webkit-transform","scale("+  (Math.random() * (0.9-0.7) + 0.6)  +")");
-			$(this).css("border-"+randomborder[Math.floor(Math.random() * (3-0) + 0)],"4px solid black");
+			$(this).css("border-"+randomborder[Math.floor(Math.random() * (5-0) + 0)],"4px solid black");
 		});
 
 		img2.each(function(){
@@ -828,7 +828,7 @@ $(".toprint").click(function(){
 			$(this).css("margin", Math.random()*150 +"px");
 			$(this).css("-webkit-transform","scale("+  (Math.random() * (1.4-1) + 1)  +")");
 		});
-		
+
 
 		footnotes.each(function(){
 			$(this).css("position","absolute");
@@ -856,6 +856,7 @@ $(".toprint").click(function(){
 	};
 	var afterPrint = function() {
 		location.reload();
+
 	};
 
 	window.onbeforeprint = beforePrint;
