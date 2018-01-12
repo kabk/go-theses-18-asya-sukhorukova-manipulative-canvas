@@ -797,7 +797,7 @@ $(".toprint").click(function(){
 		var maintext = $("mydiv1").find(".maintext");
 		var img2 = $(".maintext").find(".imgs");
 		var mydiv1 = $("#mydiv1");
-		var randomborder = ["","bottom","right","left","top"];
+		var randomborder = ["-bottom","-right","-left","-top"];
 
 
 		console.log('Functionality to run before printing.');
@@ -807,26 +807,28 @@ $(".toprint").click(function(){
 		img.each(function(){
 			$(this).css("padding-left",Math.random()*150 +"px");
 			$(this).css("padding-right",Math.random()*150 +"px");
-			$(this).css("padding-top",Math.random()*40 +"px");
-			$(this).css("padding-bottom",Math.random()*40 +"px");
-			$(this).css("margin-left", Math.random()*250 +"px");
+			$(this).css("padding-top",(Math.random() * (40-10) + 10) +"px");
+			$(this).css("padding-bottom",(Math.random() * (40-10) + 10) +"px");
+			$(this).css("margin-left", Math.random()*350 +"px");
 			$(this).css("margin-right", Math.random()*350 +"px");
-			$(this).css("margin-top", Math.random()*40 +"px");
-			$(this).css("margin-bottom", Math.random()*40 +"px");
-			$(this).css("min-height","150px");
+			$(this).css("margin-top", Math.random()*100 +"px");
+			$(this).css("margin-bottom", Math.random()*100 +"px");
+			$(this).css("min-height","100px");
 			$(this).css("min-width","150px");
 			$(this).css("max-width","500px");
 			$(this).css("-webkit-transform","scale("+  (Math.random() * (1-0.9) + 0.9)  +")");
-			$(this).css("border-"+randomborder[Math.floor(Math.random() * (5-0) + 0)],"4px solid black");
+			$(this).css("border"+randomborder[Math.floor(Math.random() * (4-0) + 0)],"4px solid black");
 		});
 
 		img2.each(function(){
-			$(this).css("padding-left",Math.random()*50 +"px");
-			$(this).css("padding-right",Math.random()*50 +"px");
-			$(this).css("padding-top",Math.random()*50 +"px");
-			$(this).css("padding-bottom",Math.random()*50 +"px");
-			$(this).css("margin", Math.random()*150 +"px");
-			$(this).css("-webkit-transform","scale("+  (Math.random() * (1.4-1) + 1)  +")");
+			$(this).css("border","4px solid black");
+			$(this).css("padding","20px");
+			// $(this).css("padding-left",Math.random()*50 +"px");
+			// $(this).css("padding-right",Math.random()*50 +"px");
+			// $(this).css("padding-top",Math.random()*50 +"px");
+			// $(this).css("padding-bottom",Math.random()*50 +"px");
+			$(this).css("margin", (Math.random() * (150-(10)) + (10)) +"px");
+			$(this).css("-webkit-transform","scale("+  (Math.random() * (1.1-1) + 1)  +")");
 		});
 
 
@@ -842,7 +844,10 @@ $(".toprint").click(function(){
 			$(this).css("margin-bottom", Math.random()*150 +"px");
 		});
 		maintext.css("width","100px" +Math.random()*70 +"px");
-		$(".underimg").css("margin-top","0px");
+		$(".underimg").css("padding-top","10px");
+		$(".underimg").css("padding","0px");
+		// $(".underimg").css("background-color","grey");
+		$(".underimg").css("border","none");
 		$(".imgs").css("margin-bottom","0px");
 		$("h2").css("left","30px");
 		$("h3").css("max-width","97%");
