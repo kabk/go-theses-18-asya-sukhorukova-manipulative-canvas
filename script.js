@@ -59,7 +59,7 @@ function isOnScreenBla(elem) {
 function init() {
 
 	if (window.confirm("Please, use Chrome for this page")) { 
-		window.open("index.html");
+		// window.open("index.html");
 	}
 	animation1();
 	sidesnormal();
